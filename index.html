@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+	<title>Tarot DivinATER!</title>
+	<meta charset="UTF-8" />
+	<link rel=’stylesheet’ type="text/css" href=’style.css’> 
+
+</head>
+<body>
+<h1> Quelle sera votre humeur du jour ? </h1>
+<div><table>
+	<tr id=0 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Recto_vide.png' alt='Recto_vide'></th> </tr>
+	<tr id=25 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Anne.png' alt='Anne'></th> </tr>
+	<tr id=1 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Audrey.png' alt='Audrey'></th> </tr>
+	<tr id=2 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Augustin.png' alt='Augustin'></th> </tr>
+	<tr id=3 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Bryan.png' alt='Bryan'></th> </tr>
+	<tr id=4 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Carole.png' alt='Carole'></th> </tr>
+	<tr id=5 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Coline.png' alt='Coline'></th> </tr>
+	<tr id=6 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Cyril.png' alt='Cyril'></th> </tr>
+	<tr id=7 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Daphnee.png' alt='Daphnee'></th> </tr>
+	<tr id=8 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='DelphineC.png' alt='DelphineC'></th> </tr>
+	<tr id=9 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='DelphineP.png' alt='DelphineP'></th> </tr>
+	<tr id=10 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Fabrice.png' alt='Fabrice'></th> </tr>
+	<tr id=11 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Flavien.png' alt='Flavien'></th> </tr>
+	<tr id=12 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Francois.png' alt='Francois'></th> </tr>
+	<tr id=13 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Florian.png' alt='Florian'></th> </tr>
+	<tr id=14 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Helise.png' alt='Helise'></th> </tr>
+	<tr id=15 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Loic.png' alt='Loic'></th> </tr>
+	<tr id=16 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Lucrece.png' alt='Lucrece'></th> </tr>
+	<tr id=17 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Marine.png' alt='Marine'></th> </tr>
+	<tr id=18 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Maylis.png' alt='Maylis'></th> </tr>
+	<tr id=19 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='PierreD.png' alt='PierreD'></th> </tr>
+	<tr id=20 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Pierrepaul.png' alt='Pierrepaul'></th> </tr>
+	<tr id=21 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Pierreyves.png' alt='Pierreyves'></th> </tr>
+	<tr id=22 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Roxane.png' alt='Roxane'></th> </tr>
+	<tr id=23 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Rubens.png' alt='Rubens'></th> </tr>
+	<tr id=24 style='display:none;'><th> <img src = 'Verso_redim.jpg' alt='Verso'><th><img src='Thomas.png' alt='Thoams'></th> </tr>
+	
+	
+			<tr>
+			<td>
+				
+			</td>
+		</tr>
+		<tr>
+			<td><input type="button" value="Prédiction" name="prediction" onclick="prediction();"></td>
+		</tr>
+	</table>
+	<input id="element" type="hidden" value="0">
+</div>
+<script type="text/javascript">
+
+	function prediction() 
+	{
+		var test = document.getElementById("element");
+		for (var i = 0;  i<25; ) {
+			var i = Math.floor(Math.random() * 26);
+			document.getElementById(i).style.display = "none";
+			if (document.getElementById("element").value == i) 
+			{
+				document.getElementById(i).style.display = "block";
+			}
+		}
+		document.getElementById("element").value++;
+		if (document.getElementById("element").value == 25)
+			document.location.href="index.php";
+	}
+
+	document.onload = prediction();
+</script>
+<style type="text/css">
+	th{
+		padding:20px;
+	}
+	table{
+		text-align: center;
+	}
+	body{
+		margin:auto;
+		width:500px;
+		background-image:url('Fond1.jpg');
+	}
+</style>
+</body>
+</html>
