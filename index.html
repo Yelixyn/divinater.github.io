@@ -48,26 +48,23 @@
 	<input id="element" type="hidden" value="0">
 </div>
 <script type="text/javascript">
+	
+	var test = document.getElementById("element");
+		document.getElementById(0).style.display = "block";
 
 	function prediction() 
 	{
-		
-		for (var i = 0;  i<25; i++ ) {
-			var test = document.getElementById("element");
-			document.getElementById(i).style.display = "none";
-			if (document.getElementById("element").value == i) 
-			{
-				var j = Math.floor(Math.random() * 26);
-				document.getElementById(i).style.display = "block";
 
-			}
-		}
-		document.getElementById("element").value++;
-		if (document.getElementById("element").value == 26)
-			document.location.href="index.php";
+			document.getElementById(0).style.display = "none";
+			var i = Math.floor(Math.random() * 26);
+			document.getElementById(i).style.display = "block";
+
+			document.getElementById("element").value++;
+		if (document.getElementById("element").value == 2)
+			document.write ("Wowowow, une seule prédiction par jour!");
 	}
 
-	document.onload = prediction();
+	
 </script>
 <style type="text/css">
 	th{
